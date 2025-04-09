@@ -8,6 +8,6 @@ if __name__ == "__main__":
         port=443,
         ssl_context=(
             '/etc/letsencrypt/live/ybenzou.work/fullchain.pem',  
-            '/etc/letsencrypt/live/ybenzou.work/privkey.pem'   
+            '/etc/letsencrypt/live/ybenzou.work/privkey.pem'
         )
     )
