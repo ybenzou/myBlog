@@ -44,7 +44,7 @@ export default {
         })
     },
     submitPost() {
-      axios.post('https://52.221.182.99:5000/api/post', {
+      axios.post('https://k3imo6rdt9.execute-api.ap-southeast-1.amazonaws.com/submitPost', {
         title: this.title,
         body: this.body
       })
@@ -60,7 +60,7 @@ export default {
     },
     deletePost(postId) {
       if (confirm("Are you sure you want to delete this post?")) {
-        axios.delete(`https://52.221.182.99:5000/api/post/${postId}`)
+        axios.delete(`https://k3imo6rdt9.execute-api.ap-southeast-1.amazonaws.com/deletePost/${postId}`)
           .then(() => {
             this.success = false
             this.fetchPosts()  // Refresh posts list after deletion

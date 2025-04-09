@@ -22,7 +22,7 @@ export default {
     }
   },
   mounted() {
-    axios.get(`https://52.221.182.99:5000/api/post/${this.$route.params.id}`)
+    axios.get(`https://rx15k12wmb.execute-api.ap-southeast-1.amazonaws.com/mounted/${this.$route.params.id}`)
       .then(res => {
         this.post = res.data
       })
