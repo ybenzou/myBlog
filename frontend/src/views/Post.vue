@@ -22,7 +22,7 @@ export default {
     }
   },
   mounted() {
-    axios.get(`https://18.141.182.142:5000/api/post/${this.$route.params.id}`)
+    axios.get(`https://ybenzou.work/api/post/${this.$route.params.id}`)
       .then(res => {
         this.post = res.data
       })
