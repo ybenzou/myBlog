@@ -20,3 +20,10 @@ def create_post():
     db.session.add(new_post)
     db.session.commit()
     return jsonify({'message': 'Post created', 'id': new_post.id}), 201
+
+@main.route('/api/post/<int:id>', methods=['DELETE'])
+def delete_post(id):
+    post = Post.query.get_or_404(id)
+    db.session.delete(post)
+    db.session.commit()
+    return jsonify({'message': 'Post deleted'}), 200
