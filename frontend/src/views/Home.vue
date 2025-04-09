@@ -52,7 +52,7 @@ export default {
   },
   methods: {
     fetchPosts() {
-      axios.get('https://k3imo6rdt9.execute-api.ap-southeast-1.amazonaws.com/fetchPosts')
+      axios.get('https://52.221.182.99:5000/api/posts')
         .then(res => {
           this.posts = res.data
           this.groupPostsByDate()
