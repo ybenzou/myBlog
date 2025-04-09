@@ -38,13 +38,13 @@ export default {
   },
   methods: {
     fetchPosts() {
-      axios.get('https://ybenzou.work/api/posts')
+      axios.get('https://18.141.182.142:5000/api/posts')
         .then(res => {
           this.posts = res.data
         })
     },
     submitPost() {
-      axios.post('https://ybenzou.work/api/post', {
+      axios.post('https://18.141.182.142:5000/api/post', {
         title: this.title,
         body: this.body
       })
@@ -60,7 +60,7 @@ export default {
     },
     deletePost(postId) {
       if (confirm("Are you sure you want to delete this post?")) {
-        axios.delete(`https://ybenzou.work/api/post/${postId}`)
+        axios.delete(`https://18.141.182.142:5000/api/post/${postId}`)
           .then(() => {
             this.success = false
             this.fetchPosts()  // Refresh posts list after deletion
