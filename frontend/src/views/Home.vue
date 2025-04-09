@@ -52,7 +52,7 @@ export default {
   },
   methods: {
     fetchPosts() {
-      axios.get('https://18.141.182.142:5000/api/posts')
+      axios.get('https://18.141.52.201/api/posts')
         .then(res => {
           this.posts = res.data
           this.groupPostsByDate()
