@@ -22,7 +22,7 @@ export default {
     }
   },
   mounted() {
-    axios.get(`http://localhost:5000/api/post/${this.$route.params.id}`)
+    axios.get(`http://52.221.182.99:5000/api/post/${this.$route.params.id}`)
       .then(res => {
         this.post = res.data
       })
