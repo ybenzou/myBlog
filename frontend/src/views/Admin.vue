@@ -38,13 +38,13 @@ export default {
   },
   methods: {
     fetchPosts() {
-      axios.get('http://52.221.182.99:5000/api/posts')
+      axios.get('https://52.221.182.99:5000/api/posts')
         .then(res => {
           this.posts = res.data
         })
     },
     submitPost() {
-      axios.post('http://52.221.182.99:5000/api/post', {
+      axios.post('https://52.221.182.99:5000/api/post', {
         title: this.title,
         body: this.body
       })
@@ -60,7 +60,7 @@ export default {
     },
     deletePost(postId) {
       if (confirm("Are you sure you want to delete this post?")) {
-        axios.delete(`http://52.221.182.99:5000/api/post/${postId}`)
+        axios.delete(`https://52.221.182.99:5000/api/post/${postId}`)
           .then(() => {
             this.success = false
             this.fetchPosts()  // Refresh posts list after deletion
